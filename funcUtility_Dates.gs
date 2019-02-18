@@ -12,6 +12,12 @@ function getDateByDaysOffset(date, offset) {
   return new Date(date.valueOf()+(offset*MILSECONDS_IN_A_DAY));  
 }
 
+var TimesheetShortDay = { //replace direct access to constants with this Enum
+  0:"n",1:"m",2:"t",3:"w",4:"r",5:"f",6:"s",
+  Sun:"n",Mon:"m",Tue:"t",Wed:"w",Thu:"r",Fri:"f",Sat:"s",
+  Sunday:"n",Monday:"m",Tuesday:"t",Wednesday:"w",Thursday:"r",Friday:"f",Saturday:"s"
+};
+
 function getShortdayFromDate(date) {
   var result;
 
